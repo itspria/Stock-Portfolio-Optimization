@@ -34,7 +34,7 @@ def GetBtc():
 # Returns all the documents from AAPL_prices     
 @app.route("/getAaplData")
 def GetAapl():    
-    results = mongo.db.APPL_prices.find()
+    results = mongo.db.AAPL_prices.find()
     data = []    
     for row in results:           
         data.append(row)                   
@@ -67,7 +67,7 @@ def GetGold():
 # Returns all the documents from NFLX_prices     
 @app.route("/getNflxData")
 def GetNflx():    
-    results = mongo.db.Nflx_prices.find()
+    results = mongo.db.NFLX_prices.find()
     data = []    
     for row in results:           
         data.append(row)                   
@@ -78,7 +78,7 @@ def GetNflx():
 # Returns all the documents from PFE_prices     
 @app.route("/getPfeData")
 def GetPfe():    
-    results = mongo.db.Pfe_prices.find()
+    results = mongo.db.PFE_prices.find()
     data = []    
     for row in results:           
         data.append(row)                   
