@@ -15,10 +15,7 @@ gold_url = "http://127.0.0.1:5000/getGoldData"
 
 
 function optionChanged(useId) {
-
     console.log("use id in op change", useId);
-
-
     if (useId == "Bitcoin (BTC)"){
         parseurl= btc_url
     }   else if (useId == "Apple (AAPL)"){
@@ -39,10 +36,7 @@ function optionChanged(useId) {
         parseurl = aapl_url
     }
     console.log("use id in op change", parseurl);
-
     PlotData(parseurl);
-
-
 };
 
 
@@ -69,38 +63,7 @@ function PlotData(useId) {
         adj_price_array.reverse()
         formatted_date_array.reverse()
 
-        // var timeFormat = 'YYYY-MM-DD';
-        // var ctx = document.getElementById("StockData");
-        // // console.log("CTX", ctx)   
-
-        // var myChart = new Chart(ctx, {
-        //     type: 'line',
-        //     data: {
-        //         labels: formatted_date_array,
-        //         datasets: [
-        //             {
-        //                 label: 'this is label',
-        //                 data: adj_price_array
-        //             }
-        //         ]
-        //     },
-        //     options: {
-        //         responsive: true,
-        //         title: {
-        //             display: true,
-        //             text: "hello"
-        //         },
-        //         scales: {
-        //             xAxes: [{
-        //                 type: "time",
-        //                 time: {
-        //                     format: timeFormat
-        //                 }
-        //             }]
-        //         }
-        //     }
-        // });
-
+ 
         var trace1 = {
             type: "scatter",
             mode: "lines",
