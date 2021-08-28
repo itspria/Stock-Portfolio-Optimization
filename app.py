@@ -110,6 +110,16 @@ def GetTsla():
     #only string formats can be sent
     return jsonify(database = 'TSLA_prices', stocksdata = json.loads(json_util.dumps(data))) 
 
+# Returns all the documents from protfolio_data
+@app.route("/getPortfolioData")
+def GetPortfolioData():    
+    results = mongo.db.portfolio_data.find()
+    data = []    
+    for row in results:           
+        data.append(row)                   
+    
+    #only string formats can be sent
+    return jsonify(database = 'portfolio_data', stocksdata = json.loads(json_util.dumps(data))) 
 
 if __name__ == "__main__":
     app.run(debug=True)
