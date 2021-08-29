@@ -13,12 +13,35 @@
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="css/sb-admin-2.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">   
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+       <style>
+           body, html {
+             height: 100%;
+             margin: 5;
+            }
+           .bg {
+                /* The image used */
+                background-image: url("images/bg1.jpg");                 
+                
+                filter: grayscale(50%);
+
+                /* Full height */
+                height: 60%; 
+
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                              
+            }
+       </style>
 </head>
 
 <body id="page-top">
@@ -68,7 +91,28 @@
                         <a class="collapse-item" href="StockPage1.html">Auto</a>
                         <a class="collapse-item" href="StockPage2.html">Custom</a>
                     </div>
-                </div>
+                </div>                
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    <i class="fas fa-fw fa-chart-line"></i>
+                    <span>Markets</span>
+                </a>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Options</h6>
+                        <a class="collapse-item" href="Apple.html">Apple</a>
+                        <a class="collapse-item" href="Delta.html">Delta Airlines</a>
+                        <a class="collapse-item" href="Netflix.html">Netflix</a>
+                        <a class="collapse-item" href="Pfizer.html">Pfizer Inc</a>
+                        <a class="collapse-item" href="Shopify.html">Shopify</a>
+                        <a class="collapse-item" href="Tesla.html">Tesla</a>
+                        <hr>
+                        <a class="collapse-item" href="BitCoin.html">Bit Coin</a>
+                        <a class="collapse-item" href="Gold.html">Gold</a>
+                    </div>
+                </div>                
             </li>
                         <!-- Divider -->
             <hr class="sidebar-divider">
@@ -101,20 +145,99 @@
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content-wrapper" class="d-flex flex-column ">
 
             <!-- Main Content -->
-            <div id="content">                         
-              
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">EZ Investments</h1>
-
-                </div>
-                <!-- /.container-fluid -->
-
+            <div class="bg">                         
+              <div class="row first-txt">
+                <h1 class="hometext1">EZ Investments</h1>
+              </div>
+                          
+              <div class="row second-txt">
+                  <p><h4 class="hometext2"><I>The current stock market is creating huge opportunities to invest - even during a pandemic. 
+                      <br>And unless you majored in finance or are a stock broker yourself, you may not feel confident enough to start investing on your own.
+                      <br>We believe proper investing should be easy – that means none of the so-called "secret" tactics Wall Street wants you to believe go hand-in-hand with the stock market.
+                      </I></h4></p>
+              </div>              
+            </div>
+            <br>
+            <div class="container-fluid">             
+                   
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="image-flip" ontouchstart="this.classList.toggle('hover')">
+                            <div class="mainflip">
+                                <div class="frontside">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <p><img class=" img-fluid" src="images/brain1.png" alt="card image"></p>
+                                            <h4 class="card-title">Make Informed Decisions</h4>
+                                            <p class="card-text">Explore to find ideas for options trading. According to the market forecast, we provide strategies that can be used.</p>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="backside">
+                                    <div class="card">
+                                        <div class="card-body text-center mt-4">
+                                            <h4 class="card-title">Make Informed Decisions</h4>
+                                            <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p> 
+                                            <a href="StockPage2.html">Start investing</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="image-flip" ontouchstart="this.classList.toggle('hover')">
+                            <div class="mainflip">
+                                <div class="frontside">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <p><img class=" img-fluid" src="images/control.png" alt="card image"></p>
+                                            <h4 class="card-title">Take Control of your investments</h4>
+                                            <p class="card-text">Looking to take charge of your portfolio, save for a vacation or simply play the markets?</p>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="backside">
+                                    <div class="card">
+                                        <div class="card-body text-center mt-4">
+                                            <h4 class="card-title">Take Control of your investments</h4>
+                                            <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                            <a href="StockPage1.html">Start investing</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="image-flip" ontouchstart="this.classList.toggle('hover')">
+                            <div class="mainflip">
+                                <div class="frontside">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <!--<i class="fa-solid fas fa-fw fa-piggy-bank"></i>-->
+                                            <img src="images/save.png">
+                                            <h4 class="card-title">Save on Transaction Fees</h4>
+                                            <p class="card-text">You're not dreaming: carry out all your stock market trades for $0 commission. No minimum required.</p>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="backside">
+                                    <div class="card">
+                                        <div class="card-body text-center mt-4">
+                                            <h4 class="card-title">Save on Transaction Fees</h4>
+                                            <p class="card-text">Buy and sell a selection of most popular stocks without paying commissions.</p>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>               
+                
             </div>
             <!-- End of Main Content -->
 
