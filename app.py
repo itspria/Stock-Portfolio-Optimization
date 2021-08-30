@@ -121,5 +121,16 @@ def GetPortfolioData():
     #only string formats can be sent
     return jsonify(database = 'portfolio_data', stocksdata = json.loads(json_util.dumps(data))) 
 
+# Returns all the documents from stocks_calc_combined
+@app.route("/getStocksCalc")
+def getStocksCalc():    
+    results = mongo.db.stocks_calc_combined.find()
+    data = []    
+    for row in results:           
+        data.append(row)                   
+    
+    #only string formats can be sent
+    return jsonify(database = 'stocks_calc_combined', stocksdata = json.loads(json_util.dumps(data))) 
+
 if __name__ == "__main__":
     app.run(debug=True)
