@@ -8,7 +8,7 @@ pf_url = "http://127.0.0.1:5000/getPortfolioData"
 closevals = []
 dates = []
 //sample data retrieval
-d3.json(aapl_url).then(function(data){
+d3.json(btc_url).then(function(data){
     console.log(data)    
     stocksData = data.stocksdata;
    
@@ -17,11 +17,11 @@ d3.json(aapl_url).then(function(data){
         closevals.push(row.adjclose);
         dates.push(row.formatted_date);    
     });
-    console.log(stocksData)
+
     chartdata = {
         labels: dates,
         datasets: [{
-          label: 'Apple stock values',
+          label: 'Bitcoin values',
           backgroundColor: 'rgb(173, 15, 33)',
           borderColor: 'rgb(173, 15, 33)',
           
@@ -36,7 +36,7 @@ d3.json(aapl_url).then(function(data){
       };
     
       var myChart = new Chart(
-        document.getElementById('appl_line'),
+        document.getElementById('btc_line'),
         config
       );
 });
