@@ -11269,6 +11269,7 @@ form.user .btn-user {
 footer.sticky-footer {
   padding: 2rem 0;
   flex-shrink: 0;
+  
 }
 
 footer.sticky-footer .copyright {
@@ -11419,7 +11420,14 @@ div.second-txt {
     border-radius: 50%;
 }
 
+.img-circle {
+  border-radius: 40%;
+}
 
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
 
 .hometext1
 {
