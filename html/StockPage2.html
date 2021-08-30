@@ -112,9 +112,117 @@
                     <!-- Page Heading -->
                     <h1 class="h3 mb-4 text-gray-800">EZ Investments</h1>
 
-                </div>
+               
                 <!-- /.container-fluid -->
+  <!-- Drop down menues -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5> STEP 1: CRITERIA SELECTION </h5>
+                        <hr>
+                        <br>
+                        <h5> Make selections below so we can generate a portfolio that suits your criteria </h5>
+                        <br>
+                    </div>
+                </div>
 
+                <div class="row">
+                    <div class="col-md-3">
+                      
+                        <div class="well">
+                            <h6>What is your Investment Period (years)?</h6>
+                            <select id="Stock_Dropdown" class="card text-white bg-secondary mb-3">
+                                <option> none selected</option>
+                                <option>5</option>
+                                <option>10</option>
+                                <option>20</option>
+                                <option>30</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3">
+                        <div class="well">
+                            <h6>How much are you investing (USD)?</h6>
+                            <!--<select id="Stock_Dropdown2">-->
+                            <input id="input-field" type="text" class="card text-white bg-secondary mb-3">
+                               <!-- <option> none selected</option>-->
+                               <!-- <option> 50,000</option>-->
+                               <!-- <option>100,000</option>-->
+                               <!-- <option>500,000</option>-->
+                            <!--</select>-->
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-md-3">
+                        <h6>What is your risk tolerance?</h6>
+                        <select id="Stock_Dropdown3" class="card text-white bg-secondary mb-3">
+                            <option> none selected </option>
+                            <option>Low risk</option>
+                            <option>Moderate risk</option>
+                            <option>High risk</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <br>
+                        <button id="button"  class="btn btn-primary" onchange="optionChanged()"> Generate portfolio </button>
+                        </select>
+                    </div>
+
+                  </div>
+<!-- portfolio info and charts  -->
+                <br>
+                <br>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5 class="panel-title">STEP 2: REVIEW YOUR PORTFOLIO</h5>
+                        <hr>
+                    </div>   
+                </div>
+                    <br>
+
+                    <div class="row">
+                    <div class="col-md-6">
+            
+                        <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h5 class="panel-title" >Historic Perfomance:</h5>
+                        </div>
+                       
+                        <div id="portfolio-metadata" class="card border-light mb-3" style="max-width: 31rem;"></div>
+                        </div>   
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                            <h5 class="panel-title" >Estimated Value at the end of Investment Period:</h5>
+                            </div>
+                            
+                            <div id="portfolio-metadata2" class="card border-light mb-3" style="max-width: 31rem;"></div>
+                        </div>  
+                    </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="panel-title" >Asset Composition (%):</h5>
+                            <div id="pie"></div>
+                        </div>
+                
+                        <div class="col-md-6">
+                            <h5 class="panel-title" >Investment by Assets (USD):</h5>
+                             <div id="pie2"></div>
+                        </div>
+                    </div>
+
+                <br>
+            </div>
             </div>
             <!-- End of Main Content -->
 
@@ -145,12 +253,13 @@
 
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+    <script src="js/dfm_stock.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="js/dashboard.js"></script>
+    
 </body>
 
 </html>
