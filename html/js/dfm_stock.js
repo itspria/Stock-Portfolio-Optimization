@@ -154,9 +154,12 @@ function optionChanged() {
         function createPlotly() {
         var dropdownMenu = d3.select("#Stock_Dropdown3");
         var selection = dropdownMenu.property("value");
+
+        var dropdownMenu_period = d3.select("#Stock_Dropdown");
+        var selection_period = dropdownMenu_period.property("value");
     
     //2) Plot a portfolio composition chart
-        if (selection === "Risk averse") {
+        if (selection === "Low risk") {
             
         //plot initial chart   
                 var data = [{
@@ -167,7 +170,7 @@ function optionChanged() {
                 
                 var layout = {
                     height: 400,
-                    width: 400
+                    width: 500
                 };
                 
                 Plotly.newPlot('pie', data, layout);
@@ -179,14 +182,67 @@ function optionChanged() {
         //display future value data on the html page
                 //get user input value for the investment amount and keep it in variable
                 var inputValue = document.getElementById("input-field").value;
-               //estimate the future value of the investments
-                var est_future_value = (inputValue * (1+(lowrisk_portf_retrun.Return/100))).toFixed(2)
-                //console.log("input", est_future_value)
 
-                //display future value data on the html page
-                d3.select("#portfolio-metadata2").html("");
-                d3.select("#portfolio-metadata2").append("p").text(`Estimated future value (USD): ${est_future_value}`);
 
+                        if (selection_period === "5") {
+                            //estimate the future value of the investments
+                            var est_future_value = (inputValue * (1+(lowrisk_portf_retrun.Return/100))**selection_period).toFixed(2)
+                                //display future value data on the html page
+                            d3.select("#portfolio-metadata2").html("");
+                            d3.select("#portfolio-metadata2").append("p").text(`Estimated future value (USD): ${est_future_value}`);
+                }
+                    //console.log("input", est_future_value)
+
+                        else if (selection_period === "10") {
+                            //estimate the future value of the investments
+                            var est_future_value = (inputValue * (1+(lowrisk_portf_retrun.Return/100))**selection_period).toFixed(2)
+                                   //display future value data on the html page
+                            d3.select("#portfolio-metadata2").html("");
+                            d3.select("#portfolio-metadata2").append("p").text(`Estimated future value (USD): ${est_future_value}`);
+                        }
+                            //console.log("input", est_future_value)
+
+                        else if (selection_period === "20") {
+                            //estimate the future value of the investments
+                            var est_future_value = (inputValue * (1+(lowrisk_portf_retrun.Return/100))**selection_period).toFixed(2)
+                        
+                                   //display future value data on the html page
+                            d3.select("#portfolio-metadata2").html("");
+                            d3.select("#portfolio-metadata2").append("p").text(`Estimated future value (USD): ${est_future_value}`);
+                        }
+
+                        else if (selection_period === "30") {
+                            //estimate the future value of the investments
+                            var est_future_value = (inputValue * (1+(lowrisk_portf_retrun.Return/100))**selection_period).toFixed(2)
+                        
+                                   //display future value data on the html page
+                            d3.select("#portfolio-metadata2").html("");
+                            d3.select("#portfolio-metadata2").append("p").text(`Estimated future value (USD): ${est_future_value}`);
+                         }
+                        else {
+                            var est_future_value = (inputValue * (1+(lowrisk_portf_retrun.Return/100))).toFixed(2)
+                        
+                                   //display future value data on the html page
+                            d3.select("#portfolio-metadata2").html("");
+                            d3.select("#portfolio-metadata2").append("p").text(`Estimated future value (USD): ${est_future_value}`);
+                        }
+
+                        //lowrisk_plot_values.map((values) => {return values*inputValue;});
+
+                        //plot2 initial chart   
+                        var data = [{
+                            x: lowrisk_plot_values.map((values) => {return values*inputValue;}),
+                            y: plot_labels,
+                            type: 'bar',
+                            orientation: 'h'
+                        }];
+
+                        var layout = {
+                            height: 400,
+                            width: 500
+                        };
+
+                        Plotly.newPlot('pie2', data, layout);
 
          } 
         else if (selection === "Moderate risk") {
@@ -200,7 +256,7 @@ function optionChanged() {
                 
                 var layout = {
                     height: 400,
-                    width: 400
+                    width: 500
                 };
                 
                 Plotly.newPlot('pie', data, layout);
@@ -212,13 +268,66 @@ function optionChanged() {
         //display future value data on the html page
                 //get user input value for the investment amount and keep it in variable
                 var inputValue = document.getElementById("input-field").value;
-               //estimate the future value of the investments
-                var est_future_value = (inputValue * (1+(modrisk_portf_retrun.Return/100))).toFixed(2)
-                //console.log("input", est_future_value)
 
-                //display future value data on the html page
-                d3.select("#portfolio-metadata2").html("");
-                d3.select("#portfolio-metadata2").append("p").text(`Estimated future value (USD): ${est_future_value}`);
+                        if (selection_period === "5") {
+                            //estimate the future value of the investments
+                            var est_future_value = (inputValue * (1+(modrisk_portf_retrun.Return/100))**selection_period).toFixed(2)
+                                //display future value data on the html page
+                            d3.select("#portfolio-metadata2").html("");
+                            d3.select("#portfolio-metadata2").append("p").text(`Estimated future value (USD): ${est_future_value}`);
+                        }
+                
+                
+                        else if (selection_period === "10") {
+                            //estimate the future value of the investments
+                            var est_future_value = (inputValue * (1+(modrisk_portf_retrun.Return/100))**selection_period).toFixed(2)
+                                   //display future value data on the html page
+                            d3.select("#portfolio-metadata2").html("");
+                            d3.select("#portfolio-metadata2").append("p").text(`Estimated future value (USD): ${est_future_value}`);
+                        }
+                            //console.log("input", est_future_value)
+
+                        else if (selection_period === "20") {
+                            //estimate the future value of the investments
+                            var est_future_value = (inputValue * (1+(modrisk_portf_retrun.Return/100))**selection_period).toFixed(2)
+                        
+                                   //display future value data on the html page
+                            d3.select("#portfolio-metadata2").html("");
+                            d3.select("#portfolio-metadata2").append("p").text(`Estimated future value (USD): ${est_future_value}`);
+                        }
+
+                        else if (selection_period === "30") {
+                            //estimate the future value of the investments
+                            var est_future_value = (inputValue * (1+(modrisk_portf_retrun.Return/100))**selection_period).toFixed(2)
+                        
+                                   //display future value data on the html page
+                            d3.select("#portfolio-metadata2").html("");
+                            d3.select("#portfolio-metadata2").append("p").text(`Estimated future value (USD): ${est_future_value}`);
+                         }
+                        else {
+                            var est_future_value = (inputValue * (1+(modrisk_portf_retrun.Return/100))).toFixed(2)
+                        
+                                   //display future value data on the html page
+                            d3.select("#portfolio-metadata2").html("");
+                            d3.select("#portfolio-metadata2").append("p").text(`Estimated future value (USD): ${est_future_value}`);
+                        }
+
+
+
+                        //plot2 initial chart   
+                        var data = [{
+                            x: modrisk_plot_values.map((values) => {return values*inputValue;}),
+                            y: plot_labels,
+                            type: 'bar',
+                            orientation: 'h'
+                        }];
+
+                        var layout = {
+                            height: 400,
+                            width: 500
+                        };
+
+                        Plotly.newPlot('pie2', data, layout);
         
         }
         else if (selection === "High risk") {
@@ -232,7 +341,7 @@ function optionChanged() {
                 
                 var layout = {
                     height: 400,
-                    width: 400
+                    width: 500
                 };
                 
                 Plotly.newPlot('pie', data, layout);
@@ -245,15 +354,66 @@ function optionChanged() {
         //display future value data on the html page
                 //get user input value for the investment amount and keep it in variable
                 var inputValue = document.getElementById("input-field").value;
-               //estimate the future value of the investments
-                var est_future_value = (inputValue * (1+(highrisk_portf_retrun.Return/100))).toFixed(2)
-                //console.log("input", est_future_value)
 
-                //display future value data on the html page
-                d3.select("#portfolio-metadata2").html("");
-                d3.select("#portfolio-metadata2").append("p").text(`Estimated future value (USD): ${est_future_value}`);
 
-                
+                        if (selection_period === "5") {
+                            //estimate the future value of the investments
+                            var est_future_value = (inputValue * (1+(highrisk_portf_retrun.Return/100))**selection_period).toFixed(2)
+                                //display future value data on the html page
+                            d3.select("#portfolio-metadata2").html("");
+                            d3.select("#portfolio-metadata2").append("p").text(`Estimated future value (USD): ${est_future_value}`);
+                            }
+
+
+
+                        else if (selection_period === "10") {
+                            //estimate the future value of the investments
+                            var est_future_value = (inputValue * (1+(highrisk_portf_retrun.Return/100))**selection_period).toFixed(2)
+                                   //display future value data on the html page
+                            d3.select("#portfolio-metadata2").html("");
+                            d3.select("#portfolio-metadata2").append("p").text(`Estimated future value (USD): ${est_future_value}`);
+                        }
+                            //console.log("input", est_future_value)
+
+                        else if (selection_period === "20") {
+                            //estimate the future value of the investments
+                            var est_future_value = (inputValue * (1+(highrisk_portf_retrun.Return/100))**selection_period).toFixed(2)
+                        
+                                   //display future value data on the html page
+                            d3.select("#portfolio-metadata2").html("");
+                            d3.select("#portfolio-metadata2").append("p").text(`Estimated future value (USD): ${est_future_value}`);
+                        }
+
+                        else if (selection_period === "30") {
+                            //estimate the future value of the investments
+                            var est_future_value = (inputValue * (1+(highrisk_portf_retrun.Return/100))**selection_period).toFixed(2)
+                        
+                                   //display future value data on the html page
+                            d3.select("#portfolio-metadata2").html("");
+                            d3.select("#portfolio-metadata2").append("p").text(`Estimated future value (USD): ${est_future_value}`);
+                         }
+                        else {
+                            var est_future_value = (inputValue * (1+(highrisk_portf_retrun.Return/100))).toFixed(2)
+                        
+                                   //display future value data on the html page
+                            d3.select("#portfolio-metadata2").html("");
+                            d3.select("#portfolio-metadata2").append("p").text(`Estimated future value (USD): ${est_future_value}`);
+                        }
+
+                //plot2 initial chart   
+                var data = [{
+                    x: highrisk_plot_values.map((values) => {return values*inputValue;}),
+                    y: plot_labels,
+                    type: 'bar',
+                    orientation: 'h'
+                }];
+
+                var layout = {
+                    height: 400,
+                    width: 500
+                };
+
+                Plotly.newPlot('pie2', data, layout);
         }
 
         else {  d3.select("#pie").html("");
