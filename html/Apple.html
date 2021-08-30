@@ -82,11 +82,10 @@
                         <a class="collapse-item" href="Apple.html">Apple</a>
                         <a class="collapse-item" href="Delta.html">Delta Airlines</a>
                         <a class="collapse-item" href="Netflix.html">Netflix</a>
-                        <a class="collapse-item" href="Pfizer.html">Pfizer Inc</a>
+                        <a class="collapse-item" href="Pfizer.html">Pfizer</a>
                         <a class="collapse-item" href="Shopify.html">Shopify</a>
-                        <a class="collapse-item" href="Tesla.html">Tesla</a>
-                        <hr>
-                        <a class="collapse-item" href="BitCoin.html">Bit Coin</a>
+                        <a class="collapse-item" href="Tesla.html">Tesla</a>                        
+                        <a class="collapse-item" href="BitCoin.html">Bitcoin</a>
                         <a class="collapse-item" href="Gold.html">Gold</a>
                     </div>
                 </div>                
@@ -107,7 +106,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="contacts.html">
                     <i class="fas fa-fw fa-address-card"></i>
-                    <span>About</span></a>
+                    <span>Contact</span></a>
             </li>
 
             <!-- Divider -->
@@ -131,8 +130,29 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">EZ Investments</h1>
-
+                    <h1 class="h3 mb-4 text-gray-800">Apple Inc.</h1>
+                    <div class="row"> 
+                        <div class="col-md-4">
+                            <img src="images/apple_logo.png" height=100 width =100>                            
+                            </p>
+                        </div>                  
+                        <div class="col-md-4">
+                            <p>One Apple Park Way<br>
+                            Cupertino, CA 95014<br>
+                            United States<br>
+                            408-996-1010<br>
+                            <a href="http://www.apple.com">http://www.apple.com</a>
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <p>Sector(s): <b>Technology</b><br>
+                                Industry: <b>Consumer Electronics</b><br>                                
+                            </p>
+                        </div>                       
+                    </div>
+                    <div>
+                        <canvas id="appl_line"></canvas>
+                    </div>
                 </div>
                 <!-- /.container-fluid -->
 
@@ -171,7 +191,9 @@
     <script src="js/sb-admin-2.min.js"></script>
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="js/dashboard.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/apple.js"></script>
 </body>
 
 </html>
