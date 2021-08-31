@@ -36,18 +36,7 @@ d3.json(aapl_url).then(function(data){
       config = {
         type: 'line',
         data: chartdata,
-        options: {
-          animation: {
-            onComplete: () => {
-              delayed = true;
-            },
-            delay: (context) => {
-              let delay = 0;
-              if (context.type === 'data' && context.mode === 'default' && !delayed) {
-                delay = context.dataIndex * 300 + context.datasetIndex * 100;
-              }
-              return delay;
-            },
+        options: {          
           scale: {
             x: { 
               reverse: true 
@@ -61,11 +50,6 @@ d3.json(aapl_url).then(function(data){
         config
       );
 });
-
-d3.json(url).then(function(data){
-  console.log(data)
-});
-
  
  
  
