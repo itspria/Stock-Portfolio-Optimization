@@ -143,146 +143,181 @@
 
                     <h5>Please fill out the form below with how much investment you would like in each of the stocks
                     </h5>
-                    <!-- Fill the Form -->
-                    <form>
-                        <div class="form-group row col-md-6">
-                            <label for="inputBTC" class="col-sm-3 col-form-label">Bitcoin (BTC)</label>
-                            <div class="input-group col-sm-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">$</span>
-                                </div>
-                                <input type="number" class="form-control" id="BTCInput" placeholder="0">
-                                <div class="input-group-append">
-                                    <span class="input-group-text">.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row col-md-6">
-                            <label for="inputAAPL" class="col-sm-3 col-form-label">Apple (AAPL)</label>
-                            <div class="input-group col-sm-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">$</span>
-                                </div>
-                                <input type="number" class="form-control" id="AAPLInput" placeholder="0">
-                                <div class="input-group-append">
-                                    <span class="input-group-text">.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row col-md-6">
-                            <label for="inputSHOP" class="col-sm-3 col-form-label">Shopify (SHOP)</label>
-                            <div class="input-group col-sm-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">$</span>
-                                </div>
-                                <input type="number" class="form-control" id="SHOPInput" placeholder="0">
-                                <div class="input-group-append">
-                                    <span class="input-group-text">.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row col-md-6">
-                            <label for="inputTSLA" class="col-sm-3 col-form-label">Tesla (TSLA)</label>
-                            <div class="input-group col-sm-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">$</span>
-                                </div>
-                                <input type="number" class="form-control" id="TSLAInput" placeholder="0">
-                                <div class="input-group-append">
-                                    <span class="input-group-text">.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row col-md-6">
-                            <label for="inputDAL" class="col-sm-3 col-form-label">Delta Airlines (DAL)</label>
-                            <div class="input-group col-sm-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">$</span>
-                                </div>
-                                <input type="number" class="form-control" id="DALInput" placeholder="0">
-                                <div class="input-group-append">
-                                    <span class="input-group-text">.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row col-md-6">
-                            <label for="inputPFE" class="col-sm-3 col-form-label">Pfizer (PFE)</label>
-                            <div class="input-group col-sm-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">$</span>
-                                </div>
-                                <input type="number" class="form-control" id="PFEInput" placeholder="0">
-                                <div class="input-group-append">
-                                    <span class="input-group-text">.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row col-md-6">
-                            <label for="inputNFLX" class="col-sm-3 col-form-label">Netflix (NFLX)</label>
-                            <div class="input-group col-sm-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">$</span>
-                                </div>
-                                <input type="number" class="form-control" id="NFLXInput" placeholder="0">
-                                <div class="input-group-append">
-                                    <span class="input-group-text">.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row col-md-6">
-                            <label for="inputGOLD" class="col-sm-3 col-form-label">Barrick Gold (GOLD)</label>
-                            <div class="input-group col-sm-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">$</span>
-                                </div>
-                                <input type="number" class="form-control" id="GOLDInput" placeholder="0">
-                                <div class="input-group-append">
-                                    <span class="input-group-text">.00</span>
-                                </div>
-                            </div>
-                        </div>
+                    <br>
 
-                        <div class="form-group row">
-                            <div class="col-sm-10">
-                                <button type="button" class="btn btn-primary" onclick="calcPortfolio()">Create My
-                                    Portfolio</button>
+                    <div class="row">
+                        <div class="col-sm">
+                            <!-- Fill the Form -->
+                            <form>
+                                <div class="form-group row">
+                                    <label for="inputBTC" class="col-sm-3 col-form-label">Bitcoin (BTC)</label>
+                                    <div class="input-group col-sm-5">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                        <input type="number" class="form-control" id="BTCInput" placeholder="0">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputAAPL" class="col-sm-3 col-form-label">Apple (AAPL)</label>
+                                    <div class="input-group col-sm-5">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                        <input type="number" class="form-control" id="AAPLInput" placeholder="0">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputSHOP" class="col-sm-3 col-form-label">Shopify (SHOP)</label>
+                                    <div class="input-group col-sm-5">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                        <input type="number" class="form-control" id="SHOPInput" placeholder="0">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputTSLA" class="col-sm-3 col-form-label">Tesla (TSLA)</label>
+                                    <div class="input-group col-sm-5">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                        <input type="number" class="form-control" id="TSLAInput" placeholder="0">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputDAL" class="col-sm-3 col-form-label">Delta Airlines
+                                        (DAL)</label>
+                                    <div class="input-group col-sm-5">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                        <input type="number" class="form-control" id="DALInput" placeholder="0">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputPFE" class="col-sm-3 col-form-label">Pfizer (PFE)</label>
+                                    <div class="input-group col-sm-5">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                        <input type="number" class="form-control" id="PFEInput" placeholder="0">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputNFLX" class="col-sm-3 col-form-label">Netflix (NFLX)</label>
+                                    <div class="input-group col-sm-5">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                        <input type="number" class="form-control" id="NFLXInput" placeholder="0">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputGOLD" class="col-sm-3 col-form-label">Barrick Gold
+                                        (GOLD)</label>
+                                    <div class="input-group col-sm-5">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                        <input type="number" class="form-control" id="GOLDInput" placeholder="0">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-10">
+                                        <button type="button" class="btn btn-primary" onclick="calcPortfolio()">Create
+                                            My
+                                            Portfolio</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm">
+                            <div class="card" style="width: 25rem;">
+                                <div class="card-header">
+                                    Summary:
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Expected Return</h5>
+                                    <p class="card-text">Based on your investments this is your expected return for next
+                                        year:
+                                    </p>
+                                    <p class="card-text">Total Investment: $<span id="TotalInv"></span></p>
+                                    <p class="card-text">Expected Annual Return: $<span id="ExpAnnRet"></span></p>
+                                    <p class="card-text">Expected Annual Return: <span id="ExpAnnRet%"></span>%</p>
+                                    <p class="card-text">Expected Portolfio Value: $<span id="ExpPortVal"></span></p>
+                                    <a href="StockPage2.html" class="btn btn-primary">Try Our Porfolio Generator</a>
+                                </div>
                             </div>
                         </div>
-                    </form>
-
-                    <div class="card">
-                        <div class="card-header">
-                          Summary:
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">Expected Return</h5>
-                          <p class="card-text">Based on your investments this is your expected return for next year:</p>
-                          <p class="card-text">Total Investment: <span id="TotalInv"></span></p>
-                          <p class="card-text">Expected Annual Return: <span id="ExpAnnRet"></span></p>
-                          <p class="card-text">Expected Portolfio Value: <span id="ExpPortVal"></span></p>
-                          <a href="StockPage2.html" class="btn btn-primary">Try Our Porfolio Generator</a>
-                        </div>
-                      </div>
-                    <div class="well">
-                        <h5>Select Stock</h5>
-                        <select id="Stock_Dropdown" onchange="optionChanged(this.value)">
-                            <option>Bitcoin (BTC)</option>
-                            <option>Apple (AAPL)</option>
-                            <option>Shopify (SHOP)</option>
-                            <option>Tesla (TSLA)</option>
-                            <option>Delta Air Lines (DAL)</option>
-                            <option>Pfizer (PFE)</option>
-                            <option>Netflix (NFLX)</option>
-                            <option>Barrick Gold Corp (GOLD)</option>
-                        </select>
                     </div>
 
+                    <div class="row">
+                        <div class="col">
+                            <!-- plotly-->
+                            <div id="StockData1"></div>
+                        </div>
+                        <div class="col">
+                            <!-- plotly-->
+                            <div id="StockData3"></div>
+                        </div>
+                    </div>
 
+                    <br>
+                    <h5>Want to explore individual stock performances over the last year before making a decision?
+                        Select the stock you would like to explore further from the dropdown below:
+                    </h5>
+                    <br>
 
+                    <div class="row">
+                        <div class="col">
 
-
-                    <!-- plotly-->
-                    <div id="StockData2"></div>
+                            <div class="well">
+                                <h5>Select Stock</h5>
+                                <select id="Stock_Dropdown" onchange="optionChanged(this.value)">
+                                    <option>Bitcoin (BTC)</option>
+                                    <option>Apple (AAPL)</option>
+                                    <option>Shopify (SHOP)</option>
+                                    <option>Tesla (TSLA)</option>
+                                    <option>Delta Air Lines (DAL)</option>
+                                    <option>Pfizer (PFE)</option>
+                                    <option>Netflix (NFLX)</option>
+                                    <option>Barrick Gold Corp (GOLD)</option>
+                                </select>
+                            </div>
+                            <!-- plotly-->
+                            <div id="StockData2"></div>
+                        </div>
+                        <div class="col">
+  
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
                 <!-- /.container-fluid -->
