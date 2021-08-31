@@ -12,10 +12,14 @@ nflx_url = "http://127.0.0.1:5000/getNflxData"
 tesla_url ="http://127.0.0.1:5000/getTSLAData"
 shop_url = "http://127.0.0.1:5000/getShopData"
 pfizer_url = "http://127.0.0.1:5000/getPfeData"
+
+
+
 closevals = []
 dates = []
+
 //sample data retrieval
-d3.json(aapl_url).then(function(data){
+d3.json(dal_url).then(function(data){
     console.log(data)    
     stocksData = data.stocksdata;
    
@@ -24,14 +28,14 @@ d3.json(aapl_url).then(function(data){
         closevals.push(row.adjclose);
         dates.push(row.formatted_date);    
     });
+
     closevals.reverse();
     dates.reverse();
     
-    console.log(stocksData)
     chartdata = {
         labels: dates,
         datasets: [{
-          label: 'Apple stock values',
+          label: 'Delta stock values',
           backgroundColor: 'rgb(173, 15, 33)',
           borderColor: 'rgb(173, 15, 33)',
           
@@ -42,17 +46,11 @@ d3.json(aapl_url).then(function(data){
       config = {
         type: 'line',
         data: chartdata,
-        options: {
-          scale: {
-            x: { 
-              reverse: true 
-            }
-          }
-        }
+        options: {}
       };
     
       var myChart = new Chart(
-        document.getElementById('appl_line'),
+        document.getElementById('delta_line'),
         config
       );
 });

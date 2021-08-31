@@ -2,9 +2,17 @@
 sampleurl = 'https://api.publicapis.org/entries'
 
 //url to be used to query data from respective collections
+pf_url = "http://127.0.0.1:5000/getPortfolioData"
+
 btc_url = "http://127.0.0.1:5000/getBtcData"
 aapl_url = "http://127.0.0.1:5000/getAaplData"
-pf_url = "http://127.0.0.1:5000/getPortfolioData"
+dal_url = "http://127.0.0.1:5000/getDalData"
+gold_url = "http://127.0.0.1:5000/getGoldData"
+nflx_url = "http://127.0.0.1:5000/getNflxData"
+tesla_url ="http://127.0.0.1:5000/getTSLAData"
+shop_url = "http://127.0.0.1:5000/getShopData"
+pfizer_url = "http://127.0.0.1:5000/getPfeData"
+
 closevals = []
 dates = []
 //sample data retrieval
@@ -17,6 +25,8 @@ d3.json(btc_url).then(function(data){
         closevals.push(row.adjclose);
         dates.push(row.formatted_date);    
     });
+    closevals.reverse();
+    dates.reverse();
 
     chartdata = {
         labels: dates,
