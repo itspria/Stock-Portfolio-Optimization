@@ -150,7 +150,7 @@
                       
                         <div class="well">
                             <h6>What is your Investment Period (years)?</h6>
-                            <select id="Stock_Dropdown" class="card text-white bg-secondary mb-3">
+                            <select id="Stock_Dropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                                 <option> none selected</option>
                                 <option>5</option>
                                 <option>10</option>
@@ -165,7 +165,16 @@
                         <div class="well">
                             <h6>How much are you investing (USD)?</h6>
                             <!--<select id="Stock_Dropdown2">-->
-                            <input id="input-field" type="text" class="card text-white bg-secondary mb-3">
+                            <!-- <input id="input-field" type="text" class="card text-white bg-secondary mb-3"> -->
+                            <div class="input-group col-sm-7">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                </div>
+                                <input type="number" class="form-control" id="input-field" placeholder="0">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">.00</span>
+                                </div>
+                            </div>
                                <!-- <option> none selected</option>-->
                                <!-- <option> 50,000</option>-->
                                <!-- <option>100,000</option>-->
@@ -177,12 +186,14 @@
 
                     <div class="col-md-3">
                         <h6>What is your risk tolerance?</h6>
-                        <select id="Stock_Dropdown3" class="card text-white bg-secondary mb-3">
+                        <select id="Stock_Dropdown3" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                             <option> none selected </option>
                             <option>Low risk</option>
                             <option>Moderate risk</option>
                             <option>High risk</option>
                         </select>
+
+
                     </div>
 
                     <div class="col-md-3">
@@ -212,7 +223,7 @@
                             <h5 class="panel-title" >Historic Perfomance:</h5>
                         </div>
                        
-                        <div id="portfolio-metadata" class="card border-light mb-3" style="max-width: 31rem;"></div>
+                        <div id="portfolio-metadata"  style="font-weight: 600; color:indigo; font-size: larger;"></div>
                         </div>   
                     </div>
 
@@ -223,7 +234,7 @@
                             <h5 class="panel-title" >Estimated Value at the end of Investment Period:</h5>
                             </div>
                             
-                            <div id="portfolio-metadata2" class="card border-light mb-3" style="max-width: 31rem;"></div>
+                            <div id="portfolio-metadata2" style="font-weight: 600; color:indigo; font-size: larger;"></div>
                         </div>  
                     </div>
                     </div>

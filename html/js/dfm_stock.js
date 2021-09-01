@@ -192,8 +192,8 @@ function portfolio_composition() {
                     }];
 
                     var layout = {
-                        height: 400,
-                        width: 500,
+                        height: 600,
+                        width: 700,
                         paper_bgcolor: "#f8f9fc"
                     };
 
@@ -265,8 +265,8 @@ function portfolio_composition() {
                     }];
 
                     var layout = {
-                        height: 400,
-                        width: 500,
+                        height: 600,
+                        width: 700,
                         paper_bgcolor: "#f8f9fc"
                     };
 
@@ -298,8 +298,8 @@ function portfolio_composition() {
                     }];
 
                     var layout = {
-                        height: 400,
-                        width: 500,
+                        height: 600,
+                        width: 700,
                         paper_bgcolor: "#f8f9fc"
                     };
 
@@ -370,8 +370,9 @@ function portfolio_composition() {
                     }];
 
                     var layout = {
-                        height: 400,
-                        width: 500
+                        height: 600,
+                        width: 700,
+                        paper_bgcolor: "#f8f9fc"
                     };
 
                     Plotly.newPlot('pie2', data, layout);
@@ -402,8 +403,8 @@ function portfolio_composition() {
                     }];
 
                     var layout = {
-                        height: 400,
-                        width: 500,
+                        height: 600,
+                        width: 700,
                         paper_bgcolor: "#f8f9fc"
                     };
 
@@ -475,8 +476,8 @@ function portfolio_composition() {
                     }];
 
                     var layout = {
-                        height: 400,
-                        width: 500,
+                        height: 600,
+                        width: 700,
                         paper_bgcolor: "#f8f9fc"
                     };
 
