@@ -54,6 +54,17 @@ The subscription cost of Rapid API usage
 
 Yahoo Finance API is no longer updated
 
+## Order of running files:
+1- Code/Grabbing_stock_prices.ipynb (optional)
+
+2- Code/Stock_Calculations.ipynb
+
+3- Code/JsonData_To_Mongodb.ipynb
+
+4- app.py
+
+5- html/Home.html
+
 
 
 
