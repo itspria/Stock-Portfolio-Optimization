@@ -8,19 +8,25 @@ With this project we want to enable users to be able to take control of their in
 - MANUAL PORTFOLIO OPTIMIZATION: A PAGE TO ENABLE USERS TO EXPLORE, MODIFY, AND CREATE THEIR OWN PORTFOLIO
 - EXPLORE MARKET TRENDS: SERIES OF PAGES WHERE USERS CAN EXPLORE THE INDIVIDUAL STOCKS THAT THE EZ INVESTMENT PORTFOLIO OFFERS
 
-# DATA Aquisition
+# Technologies Used
+- Pandas
+- MongoDB
+- Html, CSS, JS, D3
+- ChartJs, Plotly
+
+# Data Aquisition
 We acquired all the stock information from Rapid API.
 
 https://rapidapi.com/apidojo/api/yahoo-finance1
 
-# DATA Cleaning
+# Data Cleaning
 Acquired JSON data was transformed using Python and Pandas
 Removed irrelevant fields
 Added date field with specific format converted from epoch time
 Rounded the closing stock prices to 2 decimal places
 Cleaned data was saved to a file
 
-# DATA Calculations
+# Data Calculations
 Various statistical functions were used to calculate Annual Volatility, Annual Return, Daily Volatility and Last 3 month Return for each of the investments
 Daily returns and asset covariance was calculated and then portfolio return and volatility was computed
 
